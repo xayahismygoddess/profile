@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    /* ### Primary */
+    --Dark-cyan: hsl(127, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(131, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    /* ### Neutral */
+    --Dark-gray: hsl(0, 0%, 59%);
+    --Dark-gray-st: hsla(0, 0%, 59%, 0.25);
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    background: url('../public/profilesttback.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(1px);    
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    z-index: 1; /* Ensure it stays behind all content */
+}
+
+.container {
+    background-color: white;
+    width: 325px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2; /* Ensure it stays above the blurred background */
+}
+
+.card {
+    text-align: center;
+    position: relative;
+}
+
+.img {
+    position: relative;
+}
+
+.pattern {
+    width: 100%;
+    height: 100px;
+    background-image: url('./images/recycle.svg');
+    animation: movePattern 90s linear infinite;
+    border-radius: 12px 12px 0 0;
+}
+
+@keyframes movePattern {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1000px 0;
+    }
+}
+
+.img .avatar {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 65px; /* Adjusted to move the avatar down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 4px solid white;
+    z-index: 1; /* Ensure avatar is above the pattern */
+}
+
+.userinfo {
+    padding: 2px 20px 20px; /* Adjusted padding to move the text down */
+}
+
+.userinfo h1 {
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 18px;
+    font-weight: 510;
+    margin-bottom: 5px;
+}
+
+.userinfo h1 span {
+    color: var(--Dark-gray);
+    font-weight: 400;
+    padding-left: 4px;
+}
+
+.userinfo p {
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.userstat {
+    border-top: 1px solid var(--Dark-gray-st);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.userstat div {
+    text-align: center;
+}
+
+.userstat h1 {
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.userstat p {
+    color: var(--Dark-grayish-blue);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
