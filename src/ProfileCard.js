@@ -25,7 +25,9 @@ const ProfileCard = ({ onChangeView }) => {
               </section>
               <section className="userinfo">
                 <h1>Nate Higgers</h1>
-                <button onClick={onChangeView}>Go to Settings</button> {/* Change to button */}
+                <button className='settingsBtn' onClick={onChangeView}>
+                  <i className="fi fi-rr-settings"></i>
+                </button>
               </section>
               <section className="userstat">
                 <div>

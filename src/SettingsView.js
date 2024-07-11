@@ -49,7 +49,6 @@ const SettingsView = ({ onChangeView }) => {
                       className="settings-item"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      style={{ marginBottom: '20px', cursor: 'pointer' }}
                     >
                       <motion.h5>{item.subtitle}</motion.h5>
                       <motion.h2>{item.title}</motion.h2>
@@ -69,7 +68,6 @@ const SettingsView = ({ onChangeView }) => {
                       className="settings-item"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      style={{ marginBottom: '20px', cursor: 'pointer' }}
                     >
                       <motion.h5>{item.subtitle}</motion.h5>
                       <motion.h2>{item.title}</motion.h2>
@@ -117,7 +115,7 @@ const SettingsView = ({ onChangeView }) => {
                   )}
                 </AnimatePresence>
 
-                <button onClick={onChangeView}>Back to Profile</button>
+                <button className="back-button" onClick={onChangeView}>Back to Profile</button>
               </section>
             </div>
           </div>
